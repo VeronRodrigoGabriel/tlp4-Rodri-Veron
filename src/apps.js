@@ -1,8 +1,10 @@
+//Importamos express y las dependencias
 const express = require('express');
 const app = express();
 const cors = require('cors')
 const morgan = require('morgan')
 const helmet = require('helmet');
+//Importamos los enrutamientos del archivo index.js de la carpeta routes
 const routes = require("../routes/index.js")
 require("dotenv").config();
 
@@ -11,7 +13,7 @@ require("dotenv").config();
 const port = process.env.PORT || 3000
 
 
-
+//Configuramos los middleware y express.json
 app.use(helmet());
 app.use(cors());
 app.use(morgan("dev"));

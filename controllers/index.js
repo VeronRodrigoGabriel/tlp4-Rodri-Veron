@@ -1,20 +1,23 @@
 
+//Funciones de las rutas que devuelven un .json
+
 function rutaGet (req, res) {
-    res.status(200).send("Ruta get")
+    res.json("Ruta get")
 }
 
 function rutaPost (req, res) {
-    res.status(200).send("Ruta post")
+    res.json("Ruta post")
 }
 
 function rutaPut (req, res) {
-    res.status(200).send("Ruta put")
+    res.json("Ruta put")
 }
 
 function rutaDelete (req, res) {
-    res.status(200).send("ruta delete")
+    res.json("ruta delete")
 }
 
+//Exportamos las funciones 
 module.exports= {
     rutaGet,
     rutaPost,
